@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8e2de2">
+<title>Happy Birthday Areebs ❤️</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background:
+      radial-gradient(circle at 50% 0%, #a33ccf 0%, #521b82 28%, #19082c 65%, #090311 100%);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255, 105, 180, .16), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(150, 90, 255, .15), transparent 28%);
+    z-index: 0;
+  }
+
+  .stars, .hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: white;
+    opacity: .7;
+    animation: twinkle 2s infinite alternate;
+  }
+
+  @keyframes twinkle {
+    to { opacity: .12; transform: scale(.35); }
+  }
+
+  main {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 55px 18px 35px;
+  }
+
+  .hero-content {
+    width: min(900px, 100%);
+  }
+
+  .eyebrow {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: .8;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(72px, 18vw, 155px);
+    line-height: .9;
+    color: #ffd9f4;
+    text-shadow:
+      0 0 12px #ff9dde,
+      0 0 35px #ff4fc3,
+      0 0 75px #9b4dff;
+    animation: glow 2.4s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    to { transform: scale(1.025); filter: brightness(1.18); }
+  }
+
+  .subtitle {
+    max-width: 700px;
+    margin: 28px auto 0;
+    font-size: clamp(16px, 3.8vw, 22px);
+    line-height: 1.8;
+    color: #ffeef9;
+    font-weight: 300;
+  }
+
+  .heart {
+    display: inline-block;
+    animation: heartbeat 1.15s infinite;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    14% { transform: scale(1.2); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.14); }
+  }
+
+  .btn {
+    border: 0;
+    margin-top: 35px;
+    padding: 15px 28px;
+    border-radius: 999px;
+    color: white;
+    font: 600 15px "Poppins", sans-serif;
+    background: linear-gradient(90deg, #ff3da9, #8c4dff);
+    box-shadow: 0 0 30px rgba(255, 61, 169, .45);
+    cursor: pointer;
+    transition: .25s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 45px rgba(255, 61, 169, .7);
+  }
+
+  .scroll {
+    display: block;
+    margin-top: 45px;
+    color: #fff;
+    opacity: .65;
+    font-size: 12px;
+    animation: bounce 1.6s infinite;
+  }
+
+  @keyframes bounce {
+    50% { transform: translateY(7px); }
+  }
+
+  section.message {
+    padding: 55px 18px 90px;
+  }
+
+  .card {
+    width: min(850px, 100%);
+    margin: auto;
+    padding: clamp(28px, 7vw, 55px) clamp(20px, 6vw, 50px);
+    border-radius: 30px;
+    text-align: center;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 25px 70px rgba(0,0,0,.35);
+    backdrop-filter: blur(16px);
+  }
+
+  .script {
+    font: clamp(42px, 9vw, 65px) "Great Vibes", cursive;
+    color: #ffb5e8;
+    margin-bottom: 20px;
+  }
+
+  .card p {
+    color: #fff4fb;
+    font-size: clamp(15px, 3.6vw, 18px);
+    line-height: 2;
+  }
+
+  .promise {
+    margin-top: 28px;
+    color: #ffd0ed;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 35px 18px 45px;
+    color: #d9c3e9;
+    font-size: 12px;
+  }
+
+  /* Floating hearts */
+  .floating-heart {
+    position: fixed;
+    bottom: -50px;
+    z-index: 3;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    filter: drop-shadow(0 0 8px rgba(255,100,200,.7));
+  }
+
+  @keyframes floatUp {
+    to {
+      transform: translateY(-115vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Confetti */
+  .confetti {
+    position: fixed;
+    top: -20px;
+    z-index: 999;
+    width: 8px;
+    height: 15px;
+    pointer-events: none;
+    animation: fall linear forwards;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translate3d(var(--drift), 110vh, 0) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  /* Wish popup */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(5, 0, 12, .78);
+    backdrop-filter: blur(10px);
+  }
+
+  .overlay.show { display: flex; }
+
+  .wish {
+    width: min(520px, 100%);
+    padding: 40px 25px;
+    border-radius: 30px;
+    text-align: center;
+    background: linear-gradient(145deg, #4b176f, #16051f);
+    border: 1px solid rgba(255,255,255,.2);
+    box-shadow: 0 30px 100px rgba(0,0,0,.6);
+    animation: pop .45s ease;
+  }
+
+  @keyframes pop {
+    from { transform: scale(.65); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .wish h2 {
+    font: clamp(45px, 11vw, 65px) "Great Vibes", cursive;
+    color: #ffb1e8;
+  }
+
+  .wish p {
+    margin: 15px 0 8px;
+    line-height: 1.9;
+    color: #fff1fa;
+    font-size: 15px;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding-top: 35px; }
+    .eyebrow { letter-spacing: 2.5px; }
+    .subtitle { line-height: 1.7; }
+    .card { border-radius: 24px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+<div class="hearts" id="hearts"></div>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">A little celebration made with love</div>
+
+      <h1>Happy Birthday<br><span style="font-size:.72em;">Areebs</span></h1>
+
+      <p class="subtitle">
+        To my beautiful Areebs, the girl who makes ordinary moments feel magical,
+        my heart is so grateful that you exist.
+        <span class="heart">❤️</span>
+      </p>
+
+      <button class="btn" onclick="makeWish()">✨ Open Your Birthday Wish ✨</button>
+
+      <span class="scroll">A beautiful message is waiting for you ↓</span>
+    </div>
+  </section>
+
+  <section class="message">
+    <div class="card">
+      <div class="script">To My Beautiful Areebs 💕</div>
+
+      <p>
+        Happy Birthday, my beautiful Areebs. ❤️<br><br>
+
+        If I could give you one gift today, it would be the ability to see
+        yourself through my eyes — so you could see how precious, beautiful,
+        and truly unforgettable you are to me.<br><br>
+
+        I hope this new year of your life brings you gentle mornings,
+        peaceful nights, endless laughter, beautiful surprises, and dreams
+        that slowly turn into reality.<br><br>
+
+        Thank you for being the warmth in my happiest memories and the
+        sweetness in so many of my days. Wherever life takes us, I hope you
+        always remember that you deserve to be loved deeply, celebrated
+        endlessly, and cherished with all your heart.<br><br>
+
+        May your smile never fade, may your heart never lose its beautiful
+        hope, and may every wish you make tonight find its way to you.
+        <br><br>
+
+        <strong>Happy Birthday, Areebs — someone incredibly special to my heart. 🌹</strong>
+      </p>
+
+      <div class="promise">
+        “Areebs, today is your day, but every day feels a little more beautiful because
+        you are in this world.” ❤️
+      </div>
+
+      <button class="btn" onclick="makeWish()">🎉 Make a Birthday Wish</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Made with all the love in the world ❤️
+</footer>
+
+<div class="overlay" id="overlay">
+  <div class="wish">
+    <h2>✨ A Wish For You ✨</h2>
+    <p>
+      Close your eyes for a moment and make your biggest wish.
+      May this birthday open the door to a year filled with love,
+      laughter, beautiful memories and everything your heart has been
+      quietly wishing for. 💖
+    </p>
+    <button class="btn" onclick="closeWish()">Continue Celebrating 💕</button>
+  </div>
+</div>
+
+<script>
+  // Starry background
+  const stars = document.getElementById("stars");
+
+  for (let i = 0; i < 100; i++) {
+    const star = document.createElement("span");
+    star.className = "star";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.animationDelay = Math.random() * 2 + "s";
+    star.style.opacity = (0.2 + Math.random() * 0.8).toFixed(2);
+    stars.appendChild(star);
+  }
+
+  // Floating hearts
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "floating-heart";
+    heart.textContent = Math.random() > .5 ? "❤️" : "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.getElementById("hearts").appendChild(heart);
+
+    setTimeout(() => heart.remove(), 11000);
+  }
+
+  setInterval(createHeart, 850);
+
+  // Confetti
+  function confetti(amount = 180) {
+    const pieces = ["🎉", "💕", "✨", "💖", "🌸", "❤️"];
+
+    for (let i = 0; i < amount; i++) {
+      const piece = document.createElement("div");
+      piece.className = "confetti";
+
+      piece.textContent = Math.random() > .65
+        ? pieces[Math.floor(Math.random() * pieces.length)]
+        : "";
+
+      piece.style.left = Math.random() * 100 + "vw";
+      piece.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
+      piece.style.borderRadius = Math.random() > .5 ? "50%" : "2px";
+      piece.style.setProperty("--drift", (Math.random() * 240 - 120) + "px");
+      piece.style.animationDuration = (2.5 + Math.random() * 3.5) + "s";
+      piece.style.animationDelay = Math.random() * .7 + "s";
+
+      document.body.appendChild(piece);
+      setTimeout(() => piece.remove(), 7000);
+    }
+  }
+
+  function makeWish() {
+    document.getElementById("overlay").classList.add("show");
+    confetti(220);
+  }
+
+  function closeWish() {
+    document.getElementById("overlay").classList.remove("show");
+  }
+
+  // Initial gentle celebration
+  window.addEventListener("load", () => {
+    setTimeout(() => confetti(80), 500);
+  });
+
+  // Close popup by tapping outside it
+  document.getElementById("overlay").addEventListener("click", (event) => {
+    if (event.target.id === "overlay") closeWish();
+  });
+</script>
+
+</body>
+</html>
